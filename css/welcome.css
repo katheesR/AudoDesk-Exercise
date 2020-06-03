@@ -1,0 +1,63 @@
+.welcome-heading {
+  margin-top: 48px;
+  font-size: 22px;
+  line-height: 28px;
+  color: #000000;
+  text-align: center;
+}
+
+.welcome-username {
+  font-size: 14px;
+  line-height: 20px;
+  color: #808080;
+  text-align: center;
+}
+
+.signin-btn {
+  height: 38px;
+  border-radius: 4px;
+  background-color: #0696d7;
+  padding: 0;
+}
+
+.signin-label {
+  margin-top: 24px;
+  font-size: 20px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #3c3c3c;
+}
+
+.signin-password {
+  margin-top: 8px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #3c3c3c;
+  background-color: #ffffff;
+  height: 38px;
+  border: 1px solid #bbbbbb;
+  border-radius: 4px;
+}
+
+.signin-footer {
+  text-align: center;
+  margin-top: 135px;
+  margin-bottom: 12px;
+}
+
+.signin-footer div {
+  font-size: 14px;
+  line-height: 20px;
+  color: #999999;
+}
+
+.signin-footer a {
+  font-size: 14px;
+  line-height: 20px;
+  color: #006eaf;
+}
+
+.signin-footer a:hover {
+  text-decoration: underline;
+}

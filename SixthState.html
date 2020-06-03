@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kathees | Sixth State - Autodesk front-end developer exercise</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/signin-s6.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      function checkForm2() {}
+
+      function checkForm(form) {
+        if (form.fires.value == "") {
+          document.getElementById("hidden4").style.display = "block";
+          form.fires.focus();
+          return false;
+        }
+
+        if (form.fires.value != "") {
+          document.getElementById("hidden4").style.display = "none";
+          
+        }
+
+        if (form.last.value == "") {
+          document.getElementById("hidden5").style.display = "block";
+          form.last.focus();
+          return false;
+        }
+        if (form.last.value != "") {
+          document.getElementById("hidden5").style.display = "none";
+        }
+
+        if (form.username.value == "") {
+          document.getElementById("hidden").style.display = "block";
+          form.username.focus();
+          return false;
+        }
+        if (form.username.value != "") {
+          document.getElementById("hidden").style.display = "none";
+          
+        }
+
+        re = /^\w+$/;
+        if (!re.test(form.username.value)) {
+          document.getElementById("hidden").style.display = "block";
+          form.username.focus();
+          return false;
+        }
+
+        if (form.username.value != form.Username2.value) {
+          document.getElementById("hidden6").style.display = "block";
+          form.Username2.focus();
+          return false;
+        }
+
+        if (form.username.value == form.Username2.value) {
+          document.getElementById("hidden6").style.display = "none";
+          
+        }
+
+        if (form.pwd1.value == "") {
+          document.getElementById("hidden2").style.display = "block";
+          form.pwd1.focus();
+          return false;
+        }
+        if (form.pwd1.value != "") {
+          document.getElementById("hidden2").style.display = "none";
+        }
+
+        if (form.pwd1.value != form.pwd2.value) {
+          document.getElementById("hidden3").style.display = "block";
+          form.pwd2.focus();
+          return false;
+        }
+
+        return true;
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <form class="form-signin" onsubmit="return checkForm(this);">
+            <h1 class="h3 mb-3 signin-heading">Create account</h1>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputEmail4">First Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputEmail4"
+                  placeholder="John"
+                  name="fires"
+                />
+                <div class="form-control signin-fielderror" id="hidden4">
+                  Please enter your firstname
+                </div>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPassword4">Last Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputPassword4"
+                  placeholder="Smith"
+                  name="last"
+                />
+                <div class="form-control signin-fielderror" id="hidden5">
+                  Please enter your lastname
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputAddress">Username</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputAddress"
+                name="username"
+              />
+              <div class="form-control signin-fielderror" id="hidden">
+                Please enter a valid username
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputAddress">Re-type username</label>
+              <input type="text" class="form-control" id="inputAddress" name="Username2" />
+              <div class="form-control signin-fielderror" id="hidden6">
+                Please enter same username
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="inputAddress">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="inputAddress"
+                name="pwd1"
+              />
+              <div class="form-control signin-fielderror2" id="hidden2">
+                Please enter a password
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputAddress">Re-type password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="inputAddress"
+                name="pwd2"
+              />
+              <div class="form-control signin-fielderror2" id="hidden3">
+                Please enter a same password
+              </div>
+            </div>
+
+            <button
+              class="btn btn-lg btn-primary btn-block signin-btn"
+              type="submit"
+            >
+              Create account
+            </button>
+            <div class="signin-create-new-account">
+              <span>Already have an account?</span>
+              <a href="/">Sign in</a>
+            </div>
+
+            <div class="signin-footer">
+              <div>Your account for everything Autodesk</div>
+              <a href="/">Learn more</a>
+            </div>
+          </form>
+        </div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </body>
+</html>
